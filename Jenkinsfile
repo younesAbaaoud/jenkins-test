@@ -19,14 +19,14 @@ pipeline {
             steps {
                 bat """
                     python -m pip install --upgrade pip
-                    pip install pytest
+                    python -m pip install pytest
                 """
             }
         }
         stage('Lancer les tests') {
             steps {
                 bat """
-                    pytest --maxfail=1 --disable-warnings -q
+                   python -m pytest --maxfail=1 --disable-warnings -q
                 """
             }
         }
