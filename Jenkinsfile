@@ -26,7 +26,7 @@ pipeline {
         stage('Lancer les tests') {
             steps {
                 bat """
-                   python -m pytest --maxfail=1 --disable-warnings -q
+                   python -m pytest --cov=src --cov-report=html
                 """
             }
         }
