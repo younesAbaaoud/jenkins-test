@@ -14,5 +14,13 @@ pipeline {
                 echo "Workspace: ${env.WORKSPACE}"
             }
         }
+        
+        stage('Lancer les tests') {
+            steps {
+                bat """
+                    pytest --maxfail=1 --disable-warnings -q
+                """
+            }
+        }
     }
 }
