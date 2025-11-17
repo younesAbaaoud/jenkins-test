@@ -20,6 +20,7 @@ pipeline {
                 bat """
                     python -m pip install --upgrade pip
                     python -m pip install pytest
+                    python -m pip install pytest-cov
                 """
             }
         }
